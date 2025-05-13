@@ -128,7 +128,32 @@ blockquote em {
     font-weight: bold;
     color: #555;
 }
+.contact-details {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
+.contact-form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
 section {
     padding: 20px;
@@ -146,7 +171,7 @@ section h2 {
 }
 
 section p {
-    text-align: center;
+    text-align: justify;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -158,6 +183,38 @@ section ul {
 
 section ul li {
     margin-bottom: 10px;
+font-size: 18px;
+    padding-left: 20px;
+    position: relative;
+}
+
+section h3 {
+    color: #444;
+    font-size: 1.4em;
+    margin-top: 25px;
+    text-align: center;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+    
+section ul li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    color: #007BFF;
+}
+
+section a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
 }
 
 
@@ -259,7 +316,7 @@ form textarea {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 968px),(max-width :480px){
     nav ul {
         flex-direction: column;
     }
