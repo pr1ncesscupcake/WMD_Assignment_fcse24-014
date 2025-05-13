@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catering by Momo</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+        <div class="banner">
+            <img src="images/Catering.png" alt="Catering by Momo Banner">
+            <div class="banner-text">
+                <h1>Book here</h1>
+                <p>The best when it comes to quality catering service</p>
+            </div>
+        </div>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">About us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+        <li><a href="menus.html">Menus</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="bookings.html">Book now</a></li>
+    </ul>
+</nav>
+</header>
+<main>
+    <section id="bookings">
+        <h2>Book Now</h2>
+        <form action="submit_booking.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="event_date">Event Date:</label>
+            <input type="date" id="event_date" name="event_date" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+        <p>Thank you for choosing Momo's catering. We look forward to making your event special!</p>
+        <p>If you have any questions, feel free to contact us.</p>
+    </section>
+    <section id="cancellation-policy">
+        <h2>Cancellation Policy</h2>
+        <p>If you need to cancel your booking, please notify us at least 48 hours in advance for a full refund. Cancellations made less than 48 hours before the event may incur a cancellation fee.</p>
+        <p>We understand that plans can change, and we will do our best to accommodate your needs.</p>
+        <p>If you have any questions about our cancellation policy, please contact us.</p>
+    </section>
+        </main>
+<footer>
+    <p>&copy; 2025 Catering by Momo. All rights reserved.</p>
+</footer>
+</body>
+</html>
