@@ -34,6 +34,7 @@
         <h2>Book Now</h2>
         <form action="https://api.web3forms.com/submit" method="post">
             <input type="hidden" name="access_key" value="b9a6f85f-754b-46a4-a81c-28afabd08c78">
+            
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -51,9 +52,42 @@
 
             <button type="submit">Submit Booking</button>
         </form>
+
+        <p id="form-message" style="color: red; margin-top: 10px;"></p>
         <p>Thank you for choosing Momo's catering. We look forward to making your event special!</p>
         <p>If you have any questions, feel free to contact us.</p>
     </section>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("#bookings form");
+    const submitButton = form.querySelector("button[type='submit']");
+    const message = document.getElementById("form-message");
+
+    form.addEventListener("submit", function (e) {
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const date = form.event_date.value;
+        const guests = parseInt(form.guests.value, 10);
+
+        // Reset message
+        message.textContent = "";
+
+        if (!name || !email || !phone || !date || !guests || guests <= 0) {
+            e.preventDefault();
+            message.textContent = "Please fill out all fields correctly before submitting.";
+            return;
+        }
+
+        // Disable the button to prevent multiple submissions
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+    });
+});
+</script>
+        
     <section id="cancellation-policy">
         <h2>Cancellation Policy</h2>
         <p>If you need to cancel your booking, please notify us at least 48 hours in advance for a full refund. Cancellations made less than 48 hours before the event may incur a cancellation fee.</p>
